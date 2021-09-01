@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Orlando City</title>
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">        
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">   
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
+        <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
         <link rel="stylesheet" href="css/orlando.css">
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -56,12 +58,14 @@
                 
                     <nav id="menu" class="pull-right">
                         <ul>
+                            <li><a href="index.html">Home</a></li>
                             <li><a href="#">Tickets</a></li>
                             <li><a href="#">News</a></li>
                             <li><a href="#">Schedule</a></li>
+                            <li><a href="videos.html">Videos</a></li>
                             <li class="search">
 								<div class="input-group">
-							      <input type="search" placeholder="search...">
+							      <input type="search" placeholder="search..." id="input-search">
 							      <span class="input-group-btn">
 							        <button class="" type="button"><i class="fas fa-search"></i></button>
 							      </span>
@@ -90,55 +94,77 @@
                     <hr>
                 </div>                
 
-                <div class="row thumbnails">
+                <div class="row thumbnails owl-carousel owl-theme">
 
-                    <div class="col-md-3">
+                    <div class="item">
 
-                        <img src="img/noticia-thumb.jpg" alt="Noticia">
-                        <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
-                        <div class="row time">
+                        <div class="item-inner">
 
-                            <time>July 21, 2021</time>
-
+                            <img src="img/noticia-thumb.jpg" alt="Noticia">
+                            <h3>Orlando City Acquires Goalkeeper Joe Bendik from Toronto FC</h3>
+                            <div class="row time">
+                                <time>July 21, 2021</time>
+                            </div>
                         </div>
-
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb2.jpeg" alt="Noticia">
+                            <h3>Kaka has confirmed he wil not be renewing his contract</h3>
+                            <div class="row time">
 
-                        <img src="img/noticia-thumb2.jpeg" alt="Noticia">
-                        <h3>Kaka has confirmed he wil not be renewing his contract</h3>
-                        <div class="row time">
+                                <time>July 23, 2021</time>
 
-                            <time>July 23, 2021</time>
-
+                            </div>
                         </div>
-
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="item">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb3.jpg" alt="Noticia">
+                            <h3>MSL HIGHLIGHTS: Orlando City SC vs. Inter Miami CF</h3>
+                            <div class="row time"> 
 
-                        <img src="img/noticia-thumb3.jpg" alt="Noticia">
-                        <h3>MSL HIGHLIGHTS: Orlando City SC vs. Inter Miami CF</h3>
-                        <div class="row time"> 
+                                <time>August 22, 2021</time>
 
-                            <time>August 22, 2021</time>
-
+                            </div>
                         </div>
-
                     </div>
 
-                    <div class="col-md-3">
+                    <div class="item">
+                         <div class="item-inner">   
+                            <img src="img/noticia-thumb4.jpg" alt="Noticia">
+                            <h3>Nani scores winning goal in thriller vs Atlanta United</h3>
+                            <div class="row time">
 
-                        <img src="img/noticia-thumb4.jpg" alt="Noticia">
-                        <h3>Nani scores winning goal in thriller vs Atlanta United</h3>
-                        <div class="row time">
+                                <time>August 27, 2021</time>
 
-                            <time>August 27, 2021</time>
-
+                            </div>
                         </div>
-
                     </div>
+                    <div class="item">
+                        <div class="item-inner">   
+                           <img src="img/noticia-thumb4.jpg" alt="Noticia">
+                           <h3>Nani scores winning goal in thriller vs Atlanta United</h3>
+                           <div class="row time">
+
+                               <time>August 27, 2021</time>
+
+                           </div>
+                       </div>
+                   </div>
+                   <div class="item">
+                    <div class="item-inner">   
+                       <img src="img/noticia-thumb4.jpg" alt="Noticia">
+                       <h3>Nani scores winning goal in thriller vs Atlanta United</h3>
+                       <div class="row time">
+
+                           <time>August 27, 2021</time>
+
+                       </div>
+                   </div>
+               </div>
                 </div>
 
 
@@ -318,5 +344,49 @@
         </footer>
 
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.js"></script>
+        <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+        <script>
+        $(document).ready(function(){
+
+            $("#logotipo").on("mouseover", function(){
+
+                $("#banner h1").addClass("efeito");
+
+            }).on("mouseout", function(){
+
+                $("#banner h1").removeClass("efeito");
+            });
+
+            $("#input-search").on("focus", function(){
+
+                $("li.search").addClass("ativo");            
+            
+            }).on("blur", function(){
+                $("li.search").removeClass("ativo");
+            })     
+            
+            $(".thumbnails").owlCarousel({
+                stagePadding: 20,
+                loop:true,
+                margin:20,
+                // nav:true,
+                // navText: ["Anterior", "Próximo"],
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:2
+                    },
+                    1000:{
+                        items:3
+                    }
+                }
+            });
+
+        });
+        </script>
+
     </body>
     </html>
