@@ -95,10 +95,12 @@
 
                     <div class="row">
 
-                        <video controls muted poster="img/highlights.jpg">
+                        <video controls poster="img/highlights.jpg">
                             <source src="mp4/highlights.mp4">
                         </video>
+                        <input type="range" id="volume" min="0" max="1" step="0.01" value="0.3">
 
+                        <button type="button" id="btn-play-pause" class="btn btn-sucess">PLAY</button>
                     </div>
                  
                 </div>
@@ -268,7 +270,40 @@
                     });
 
                 });
-    
+
+                //pegando a tag do vídeo $("video")
+                //depois pegando a posição[0] do array
+                //$("video")[0];
+                //temos acesso ao video src=mp4/highlights.mp4
+                //com o comando dir($('video')[0]) teremos acesso aos metodos atributos 
+                //que podemos manipular via javascript deste elemento
+                //no atributo __proto, é possível ver os métodos
+                //ex $('video')[0].volume = .5 altera o volume no player (vai de 0 a 1); 
+                //criando um input type range na tag do video
+
+                $('#volume').on("mousemove", function(){
+
+                    $('video')[0].volume = parseFloat($(this).val());
+                });
+
+                $('#btn-play-pause').on("click", function(){
+                   
+                    var video = $('video')[0];
+
+                    if($(this).hasClass('btn-success')) {
+                        $(this).text("STOP");
+                        video.play();
+                    }else {
+                        $(this).text("PLAY");
+                        video.pause();
+                    }
+
+                     //toggleClass permite trocar a própria classe, falando que deve ser removida
+                    //ou adicionada
+                    $(this).toggleClass('btn-success btn-danger');
+                    
+                });
+
             });
             </script> 
    
