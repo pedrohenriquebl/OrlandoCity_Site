@@ -82,12 +82,67 @@
 
         <section>
 
-            <div id="banner">
-                <!-- <img src="img/banner.jpg"> -->
-                <h1>Orlando City<small>Orlando City Soccer Club</small></h1>                
+            <div id="call-to-action">
+
+                <div class="container">
+
+                    <div class="row text-center videos">
+
+                        <h2>Videos</h2>
+                        <hr>
+
+                    </div>
+
+                    <div class="row">
+
+                        <video controls muted poster="img/highlights.jpg">
+                            <source src="mp4/highlights.mp4">
+                        </video>
+
+                    </div>
+                 
+                </div>
+
+            </div>     
+            
+            
+            <div id="news" class="container" style="top:0">
+
+                <div  class="row">
+                    <h2>Latest News</h2>
+                    <hr>
+                </div>                
+
+                <div class="row thumbnails owl-carousel owl-theme">
+                    <div class="item" data-video="highlights">
+                        <div class="item-inner">
+                            <img src="img/highlights.jpg" alt="Highlights">
+                            <h3>Highlights</h3>                           
+                        </div>
+                    </div>                                   
+                    <div class="item" data-video="Orlando_City_Foundation_2015">
+                        <div class="item-inner">
+                            <img src="img/Orlando_City_Foundation_2015.jpg" alt="Highlights">
+                            <h3>Orlando City Foundation 2015</h3>  
+                        </div>
+                    </div>  
+                    <div class="item" data-video="highlights">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb3.jpg" alt="Highlights">
+                            <h3>Highlights</h3>                           
+                        </div>
+                    </div>                    
+                    <div class="item" data-video="Orlando_City_Foundation_2015">
+                        <div class="item-inner">
+                            <img src="img/noticia-thumb4.jpg" alt="Highlights">
+                            <h3>Orlando City Foundation 2015</h3>  
+                        </div>
+                    </div>                    
+                </div>
             </div>
 
         </section>
+
         <footer>
 
             <div class="row row-cinza-claro">
@@ -195,6 +250,28 @@
         </footer>
 
         <script src="bootstrap/js/bootstrap.min.js"></script>
+        <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.js"></script>
+        <script src="OwlCarousel2-2.3.4/docs/assets/owlcarousel/owl.carousel.min.js"></script>
+        <script src="js/efeitos.js"></script>
+
+        <script>
+            $(function(){
+    
+                $(".thumbnails .item").on("click", function(){
+    
+                    console.log($(this).data('video'));
+                    //.attr atributo attr muda um atributo de uma tag
+                    //neste caso estamos pedindo para mudar a tag atual para mp4
+                    $("video").attr({
+                        "src" : "mp4/"+$(this).data('video')+".mp4",
+                        "poster":"img/"+$(this).data('video')+".jpg"
+                    });
+
+                });
+    
+            });
+            </script> 
+   
     </body>
 
 </html>
