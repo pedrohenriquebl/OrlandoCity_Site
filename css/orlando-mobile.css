@@ -1,0 +1,388 @@
+
+
+
+@media only screen and (max-width: 1915px) {
+    #banner {
+        background: url('../img/banner2.jpg') no-repeat;
+        width: 100%;
+        height: 720px;
+        position: relative;
+        top: -285px;
+    }    
+}
+
+
+@media only screen and (max-width: 1024px) {
+    
+    footer .pull-left {
+        right: 0%;
+        line-height: 40px;
+    }
+
+    footer .p-right {
+        left: 40%;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (max-width:768px){
+    .header-black ul {
+        display: none;
+    }  
+    
+    #estatisticas {
+        height: auto;
+    }  
+    #estatisticas p {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    #call-to-action {
+        margin-top: -50px;
+    }
+
+    #call-to-action hr {
+        border-width: 4px;
+    }
+
+    #call-to-action p {
+        text-align: justify;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    #call-to-action h2 {
+        font-size: 32px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #call-to-action .btn{
+        min-width: 138px;
+    }
+
+    #call-to-action .btn-roxo {
+        float: left;
+    }
+
+    #call-to-action .btn-amarelo {
+        float: right;
+    }
+
+    #call-to-action .col-xs-6 {
+        padding: 0;
+    }
+
+    footer {
+        margin-top: 60px;
+    }
+
+    footer .row{
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .copyright-mobile {
+        margin-right: 70px;
+    }
+
+    .copyright-mobile p {
+        font-size: 10px;
+        line-height: 0;
+    }
+
+    footer .row p{
+        line-height: 20px;
+        margin-left: 22px;
+    }
+
+    /* p:nth-child(2) para o segundo elemento */
+    footer .row p:first-child {
+        margin-top: 10px;
+    }
+
+    footer .p-right{
+        margin-right: 20px;    
+    }
+
+}
+
+
+
+@media only screen and (max-width:480px){
+    .header-black ul, #menu {
+        display: none;
+    }
+    
+    #logotipo {
+        left: 32%;
+    }
+
+    #btn-bars, #btn-search{
+        color: #fff;
+        font-size: 22px;
+        position: absolute;
+        top: 5px;
+        background: none;
+        border: none;
+        display: block;
+    }
+
+    #btn-bars {
+        left: 5px;
+    }
+
+    #btn-search {
+        right: 20px;
+    }    
+
+    #banner {
+        background-position: center;
+        background-size: cover;
+        height: 317px;
+        top: -157px;
+    }
+
+    #banner h1 {
+       top: 176px; 
+       font-size: 48px;
+       margin-left: 0;
+       text-align: center;
+    }
+
+    #banner h1 small {
+        font-size: 22px;
+    }
+
+    #news h2 {
+        margin-top: 40px;
+        font-size: 32px;
+    }
+
+    #news hr {
+        border-width: 2px;
+    }
+
+    .owl-carousel .owl-stage {
+        margin-left: 10px;        
+    }
+
+    .owl-carousel .owl-item img {
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .thumbnails {
+        text-align: center;
+    }
+
+    #btn-news-prev  {
+        background: none;
+        border: none;
+        color: #5E2699;
+        font-size: 48px;
+        display: block;
+        position:absolute;
+        top: 170px;
+        z-index: 4;
+    }
+    #btn-news-next {
+        background: none;
+        border: none;
+        color: #5E2699;
+        font-size: 48px;
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 170px;
+        z-index: 4;
+    }
+
+    footer {
+        position: relative;
+    }
+
+    footer ul{
+        position: absolute;
+        top: 53px;
+    }
+
+    footer .list-socials {
+        position: absolute;
+        width: 100%;
+        
+    }
+
+    footer .col-md-10{
+        padding: 0;
+    }
+
+    footer .list-socials a {
+        width: 45px;
+        height: 45px;        
+        border-radius: 24px;;
+    }
+
+    footer .list-socials i {
+        font-size: 30px;
+        margin: 9px;
+    }
+
+    footer .row-cinza-claro {
+        height: 157px;
+    }
+
+    .hidden-sm-up{
+        display: initial;
+    }
+
+    footer .row-cols ul {
+        left: 100px;
+        width: 100%;
+    }
+
+    footer .btn-footer {
+        width: 100%;
+        background-color: #11171D;
+        line-height: 48px;
+    }
+
+}
+
+
+@media only screen and (max-width: 425px) {
+    #btn-search {
+        right: 45px;
+    }
+
+    #banner {
+        background-position: center;
+        background-size: cover;
+        height: 317px;
+        top: -157px;
+    }
+
+    .owl-carousel .owl-stage {
+        margin-left: 12px;        
+    }
+
+    #btn-news-next{       
+        right: 39px;
+    }
+
+    #btn-news-prev{     
+        left:35px;
+    }
+
+    footer .row-cols ul {
+        left: 74px;
+    }
+}
+
+@media only screen and (max-width: 375px){
+    /* #btn-news-next{
+        top:155px;
+        right: 39px;
+    }
+    #btn-news-prev{
+        top:155px;
+        left:35px;
+    } */
+    .copyright-mobile s{
+        margin-left: 0;
+    }
+
+    .pull-left {
+        margin-left: 0;
+    }
+
+    footer .row p:nth-child(2){
+        margin-left: 104px;
+    }
+
+    footer .row p:first-child {
+        margin-left: 0;
+        position: relative;
+        right: -80px
+    }
+
+    footer .row-cols ul {
+        left: 38px;
+    }
+
+    /* #call-to-action p {
+        margin-left: 35px;
+        margin-right: 35px;
+    } */
+
+}
+
+@media only screen and (max-width: 320px) {
+
+    #banner h1 {
+        font-size: 30px;        
+    }
+
+    #banner h1 small {
+        font-size: 20px;
+    }
+
+    #btn-news-next{
+        top:143px;
+        right: 39px;
+    }
+
+    #btn-news-prev{
+        top:143px;
+        left:35px;
+    }
+
+    #call-to-action {
+        margin-top: -80px;
+    }    
+
+    #call-to-action h2 {
+        font-size: 25px;
+    }
+
+    #call-to-action p {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 10px;
+    }
+
+    #estatisticas p small {
+        font-size: 18px;
+    }
+
+    footer .row p {
+        margin-left: -6px;
+        margin-bottom: -21px;    
+    }   
+
+    footer .row p:first-child {
+        margin-left: 0;
+        margin-top: 0;
+        right: 0;
+    }
+
+    footer .row p:nth-child(2) {
+        margin-left: 0;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    
+    footer .row-cols ul {
+        left: 5px;
+    }
+
+    
+   
+
+    
+    
+
+}

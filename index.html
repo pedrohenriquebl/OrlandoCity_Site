@@ -2,26 +2,32 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Orlando City</title>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">   
         <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="OwlCarousel2-2.3.4/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
         <link rel="stylesheet" href="css/orlando.css">
+        <link rel="stylesheet" href="css/orlando-mobile.css">  
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://kit.fontawesome.com/5633a622a2.js" crossorigin="anonymous"></script>
     </head>    
     <body>
 
        <header>
-
-            <div class="container">
+       
+            <div class="container container-logo">
                 <img id="logotipo" src="img/orlando-logo.png" alt="Logotipo">
             </div>
 
             <div class="header-black">
 
                 <div class="container">
+
+                    <button id="btn-bars" class="" type="button"><i class="fas fa-bars"></i></button>
+                    <button id="btn-search" class="" type="button"><i class="fas fa-search"></i></button>
+            
 
                     <ul class="pull-right">
                         <li class="club-01"><a href="#"></a></li>  
@@ -82,8 +88,7 @@
 
         <section>
 
-            <div id="banner">
-                <!-- <img src="img/banner.jpg"> -->
+            <div id="banner">          
                 <h1>Orlando City<small>Orlando City Soccer Club</small></h1>                
             </div>
 
@@ -92,7 +97,10 @@
                 <div  class="row">
                     <h2>Latest News</h2>
                     <hr>
-                </div>                
+                </div>      
+                
+                <button type="button" id="btn-news-prev"><i class="fa fa-angle-left"></i></button>
+                <button type="button" id="btn-news-next"><i class="fa fa-angle-right"></i></button>
 
                 <div class="row thumbnails owl-carousel owl-theme">
 
@@ -245,7 +253,7 @@
 
                     <div class="row">
 
-                        <div class="col-md-2">
+                        <div class="col-md-2 hidden-xs" >
 
                             <img class="logotipo" src="img/orlando-logo.png" alt="Logotipo">
 
@@ -255,7 +263,7 @@
 
                             <div class="row row-cols">
 
-                                <div class="col-md-4 col-popular-post">
+                                <div class="col-md-4 col-popular-post hidden-xs">
 
                                     <h4>POPULAR POST</h4>
                                     
@@ -275,7 +283,7 @@
 
                                 </div>
 
-                                <div class="col-md-4 col-links">
+                                <div class="col-md-4 col-links hidden-xs">
 
                                     <h4>LINKS</h4>
                                     
@@ -291,16 +299,25 @@
 
                                 <div class="col-md-4 col-get-in-touch">
 
-                                    <h4>GET IN TOUCH</h4>
+                                    <h4 class="hidden-xs">GET IN TOUCH</h4>
                                     
-                                    <address>
+                                    <address class="hidden-xs">
 
                                         <i class="fas fa-map-marker-alt"></i><span>618 E. South Street, Suite</br>
                                         510 Orlando, FL 32801</span>
 
                                     </address>
 
-                                    <p><a href="tel:1855ORLCITY"><i class="fas fa-phone-alt"></i>1.855.ORL.CITY</a></p>
+                                    <p class="hidden-xs"><a href="tel:1855ORLCITY"><i class="fas fa-phone-alt"></i>1.855.ORL.CITY</a></p>
+
+                                    <div class="row-fluid hidden-sm-up">
+                                        <div class="col-xs-6">
+                                            <a class="btn btn-footer hidden-sm-up"><i class="fas fa-map-marker-alt"></i>Location</a>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <a class="btn btn-footer hidden-sm-up"><i class="fas fa-phone-alt"></i>Call</a>
+                                        </div>
+                                    </div>                            
 
                                     <ul class="list-socials">
                                         <li class="face">
@@ -314,6 +331,9 @@
 										</li>
 										<li class="pinterest">
 											<a href="#" target="_blank"><i class="fa fa-pinterest-p"></i></a>
+										</li>
+                                        <li class="up">
+											<a href="#" target="_blank"><i class="fa fa-chevron-up"></i></a>
 										</li>
                                     </ul>
 
@@ -332,7 +352,7 @@
 
            <div class="row row-cinza-escuro">
 
-                <div class="container">
+                <div class="container copyright-mobile">
 
                     <p class="pull-left"> Copyright © Orlando City Soccer 2021. All rights reserverd</p>
                     <p class="p-right"> Created by HCODE in Udemy</p>

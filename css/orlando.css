@@ -181,9 +181,10 @@ header #logotipo {
 }
 
 #banner {
-    background: url('../img/banner2.jpg') no-repeat;
+    background: url('../img/2560_banner.jpg') no-repeat;
     width: 100%; 
-    height: 720px;
+    height: 930px;
+    background-position: cover;
     position: relative;
     top:-285px;
 }
@@ -496,6 +497,10 @@ footer .pinterest {
     left: 45%;
 }
 
+footer .up {
+    left: 60%;
+}
+
 footer .list-socials i{
     font-size: 16px;
     margin: 7px auto;
@@ -509,3 +514,13 @@ footer .list-socials i{
 video {
     width: 60%;
 }
+
+#btn-search, #btn-bars {
+    display: none;
+}
+
+#btn-bars, #btn-search,
+#btn-news-prev, #btn-news-next, .hidden-sm-up {
+    display: none;
+}
+
