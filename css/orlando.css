@@ -520,7 +520,11 @@ video {
 }
 
 #btn-bars, #btn-search,
-#btn-news-prev, #btn-news-next, .hidden-sm-up {
+#btn-news-prev, #btn-news-next{
+    display: none;
+}
+
+.up {
     display: none;
 }
 
