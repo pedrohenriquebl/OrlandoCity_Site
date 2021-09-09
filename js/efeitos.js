@@ -21,8 +21,7 @@ $(document).ready(function(){
         stagePadding: 20,
         loop:true,
         margin:20,
-        nav:true,
-        navText: ["Anterior", "Próximo"],
+        nav:true,        
         responsive:{
             0:{
                 items:1
