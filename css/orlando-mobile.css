@@ -152,6 +152,10 @@
     .p-right {
         bottom: -10px;
     }
+
+    .col-md-10{
+        height: 0px;
+    }
    
 }
 
