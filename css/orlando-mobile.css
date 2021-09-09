@@ -41,6 +41,10 @@
         display: none;
     }  
     
+    #banner {
+        background-position: center;
+    }
+
     #estatisticas {
         height: auto;
     }  
@@ -128,6 +132,28 @@
 
 }
 
+@media only screen and (max-width: 768px) and (min-width: 481px){
+
+    .row-cols{
+        display: flex;
+        position: relative;
+        left: 150px;
+        bottom: 173px;
+    }    
+
+    footer .row p {
+        margin-left: 0;
+    }
+
+    footer .list-socials {
+        margin-left: -6px;
+    }
+
+    .p-right {
+        bottom: -10px;
+    }
+   
+}
 
 
 @media only screen and (max-width:480px){
